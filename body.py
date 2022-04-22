@@ -7,7 +7,8 @@ screen = pygame.display.set_mode((width, height))
 pygame.display.set_caption('Priest Beast')
 clock = pygame.time.Clock()
 
-BG = pygame.transform.scale2x(pygame.image.load('background.png')).convert_alpha()
+BG = pygame.transform.scale2x(pygame.image.load('art/background.png')).convert_alpha()
+
 #Loop and exit
 while True:
     for event in pygame.event.get():
@@ -15,9 +16,7 @@ while True:
             pygame.quit()
             exit()
 
-    #Surface. (0, 0) - coordinates.
     screen.blit(BG,(0, 0))
-    #Draw all our elements
     #Update everything
     pygame.display.update()
     clock.tick(60)
